@@ -1,0 +1,5 @@
+from sklearn.preprocessing import MinMaxScaler
+scaler=MinMaxScaler()
+qsec=pd.DataFrame(a['qsec']) #qsec 칼럼을 데이터프레임으로
+qsec=scaler.fit_transform(qsec) 
+len(qsec[qsec>0.5]) #변환 후 0.5보다 큰 값을 가지는 레코드수
